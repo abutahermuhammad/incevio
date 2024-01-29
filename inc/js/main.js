@@ -8,6 +8,15 @@ if (AOS) {
   });
 }
 
+// Mobile Menu
+const mobileMenuBtn = document.querySelector(".z_primaryNav--menuBtn");
+const mobileMenu = document.querySelector(".z_primaryNav--mobileMenu");
+
+mobileMenuBtn.addEventListener("click", () => {
+  mobileMenuBtn.classList.toggle("--active");
+  mobileMenu.classList.toggle("--active");
+});
+
 // Carousel Implementation
 const slider = document.querySelector(".z_hero--slider");
 const sliderDots = document.querySelector(".z_hero--slider--dots");
