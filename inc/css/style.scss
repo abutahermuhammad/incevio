@@ -264,7 +264,7 @@ select {
   resize: none;
 }
 select {
-  background: url("./../../assets/img/arrow.svg") no-repeat;
+  background: url("./../../public/img/arrow.svg") no-repeat;
   background-position: right 15px top; /* Change the px value here to change the distance */
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -464,7 +464,7 @@ section {
     left: 0;
     z-index: -1;
     background: linear-gradient(90deg, #140d26 60.94%, rgba(0, 0, 0, 0) 100%),
-      url(/assets/img/city.jpg) center no-repeat,
+      url(/public/img/city.jpg) center no-repeat,
       lightgray 1010.787px -1137.327px / 83.477% 373.06% no-repeat;
   }
 

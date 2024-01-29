@@ -80,9 +80,9 @@ acc.forEach((item) => {
     //   Change icon
     const icon = title.querySelector(".z_faq--accordion--icon");
     if (body.classList.contains("active")) {
-      icon.src = "./assets/img/arrow-up.svg";
+      icon.src = "./public/img/arrow-up.svg";
     } else {
-      icon.src = "./assets/img/arrow.svg";
+      icon.src = "./public/img/arrow.svg";
     }
   });
 });
