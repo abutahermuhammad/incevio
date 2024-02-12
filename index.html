@@ -3,9 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-
-    <!-- <link rel="stylesheet" href="/node_modules/normalize.css/normalize.css" /> -->
+    <title>Incevio</title>
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./inc/css/style.css" />
@@ -17,23 +15,23 @@
       <nav class="z_primaryNav">
         <div class="z_primaryNav--container z_container">
           <div class="z_primaryNav--logo">
-            <img loading="lazy" src="/public/img/logo.png" alt="logo" />
+            <img loading="lazy" src="./public/img/logo.png" alt="logo" />
           </div>
 
           <div class="z_primaryNav--menuArea">
             <!-- Links Start -->
             <ul class="z_primaryNav--menu">
               <li>
-                <a href="#">How It Works</a>
+                <a href="#process">How It Works</a>
               </li>
               <li>
-                <a href="#">Pricing</a>
+                <a href="#pricing">Pricing</a>
               </li>
               <li>
-                <a href="#">Seller App</a>
+                <a href="#app">Seller App</a>
               </li>
               <li>
-                <a href="#">FAQ</a>
+                <a href="#faq">FAQ</a>
               </li>
             </ul>
             <!-- Links End -->
@@ -41,7 +39,7 @@
             <!-- Buttons Start -->
             <ul class="z_primaryNav--actions flex items-center justify-center">
               <li>
-                <a class="btn btn-primary" href="#">Contact Us</a>
+                <a class="btn btn-primary" href="#cta">Contact Us</a>
               </li>
             </ul>
             <!-- Buttons End -->
@@ -71,26 +69,26 @@
       <div class="z_primaryNav--mobileMenu">
         <ul>
           <li>
-            <a href="#">How It Works</a>
+            <a href="#process">How It Works</a>
           </li>
           <li>
-            <a href="#">Pricing</a>
+            <a href="#pricing">Pricing</a>
           </li>
           <li>
-            <a href="#">Seller App</a>
+            <a href="#app">Seller App</a>
           </li>
           <li>
-            <a href="#">FAQ</a>
+            <a href="#faq">FAQ</a>
           </li>
           <li>
-            <a class="btn btn-primary" href="#">Contact Us</a>
+            <a class="btn btn-primary" href="cta">Contact Us</a>
           </li>
         </ul>
       </div>
     </header>
 
     <!-- Hero Section Start -->
-    <section data-aos="fade" class="z_hero">
+    <section class="z_hero">
       <div class="z_hero--container z_container">
         <div class="z_hero-content">
           <h1
@@ -114,7 +112,7 @@
               <img
                 loading="lazy"
                 class="icon"
-                src="/public/img/check-mark.png"
+                src="./public/img/check-mark.png"
                 alt="bullet"
               />
               <p>Low cost business</p>
@@ -131,7 +129,7 @@
               <img
                 loading="lazy"
                 class="icon"
-                src="/public/img/check-mark.png"
+                src="./public/img/check-mark.png"
                 alt="bullet"
               />
               <p>Seller support</p>
@@ -148,7 +146,7 @@
               <img
                 loading="lazy"
                 class="icon"
-                src="/public/img/check-mark.png"
+                src="./public/img/check-mark.png"
                 alt="bullet"
               />
               <p>Secure payment</p>
@@ -180,7 +178,7 @@
                 <img
                   class="z_hero--slider--avatar"
                   loading="lazy"
-                  src="/public/img/avatar.jpg"
+                  src="./public/img/avatar.jpg"
                   alt="hero"
                 />
                 <p class="z_hero--slider--desc">
@@ -196,7 +194,7 @@
                 <img
                   class="z_hero--slider--avatar"
                   loading="lazy"
-                  src="/public/img/avatar.jpg"
+                  src="./public/img/avatar.jpg"
                   alt="hero"
                 />
                 <p class="z_hero--slider--desc">
@@ -212,7 +210,7 @@
                 <img
                   class="z_hero--slider--avatar"
                   loading="lazy"
-                  src="/public/img/avatar.jpg"
+                  src="./public/img/avatar.jpg"
                   alt="hero"
                 />
                 <p class="z_hero--slider--desc">
@@ -268,7 +266,7 @@
               <img
                 class="z_benefits--card--avatar"
                 loading="lazy"
-                src="/public/img/check-mark.png"
+                src="./public/img/check-mark.png"
                 alt="bullet"
               />
             </div>
@@ -295,7 +293,7 @@
               <img
                 class="z_benefits--card--avatar"
                 loading="lazy"
-                src="/public/img/check-mark.png"
+                src="./public/img/check-mark.png"
                 alt="bullet"
               />
             </div>
@@ -322,7 +320,7 @@
               <img
                 class="z_benefits--card--avatar"
                 loading="lazy"
-                src="/public/img/check-mark.png"
+                src="./public/img/check-mark.png"
                 alt="bullet"
               />
             </div>
@@ -343,7 +341,12 @@
     <!-- Benefits Section End -->
 
     <!-- Working Process Start -->
-    <section class="z_process" data-aos="fade-up" data-aos-duration="800">
+    <section
+      class="z_process"
+      id="process"
+      data-aos="fade-up"
+      data-aos-duration="800"
+    >
       <div class="z_process--container z_container">
         <div class="z_process--heading z_section--heading">
           <h1
@@ -1220,7 +1223,12 @@
     <!-- Working Process End
 
     <!-- Pricing Start -->
-    <section class="z_price" data-aos="fade-up" data-aos-duration="800">
+    <section
+      class="z_price"
+      id="pricing"
+      data-aos="fade-up"
+      data-aos-duration="800"
+    >
       <div class="z_price--container z_container">
         <div class="z_price--heading z_section--heading">
           <h1
@@ -1256,7 +1264,7 @@
                 <img
                   loading="lazy"
                   class="z_price--card--image"
-                  src="/public/img/person.png"
+                  src="./public/img/person.png"
                   alt="individual"
                 />
               </div>
@@ -1366,7 +1374,7 @@
                 <img
                   loading="lazy"
                   class="z_price--card--image"
-                  src="/public/img/peoples.png"
+                  src="./public/img/peoples.png"
                   alt="individual"
                 />
               </div>
@@ -1476,7 +1484,7 @@
                 <img
                   loading="lazy"
                   class="z_price--card--image"
-                  src="/public/img/bag.png"
+                  src="./public/img/bag.png"
                   alt="PROFESSIONAL"
                 />
               </div>
@@ -1578,7 +1586,7 @@
     <!-- Pricing End -->
 
     <!-- Mobile App Start -->
-    <section class="z_app" data-aos="fade-up" data-aos-duration="800">
+    <section class="z_app" id="app" data-aos="fade-up" data-aos-duration="800">
       <div class="z_app--container z_container">
         <div class="z_app--content">
           <h2
@@ -1642,7 +1650,7 @@
     <!-- Mobile App End -->
 
     <!-- CTA Start -->
-    <section class="z_cta" data-aos="fade-up" data-aos-duration="800">
+    <section class="z_cta" id="cta" data-aos="fade-up" data-aos-duration="800">
       <div class="z_cta--container z_container">
         <div class="z_cta--heading z_section--heading">
           <h2
@@ -1777,7 +1785,7 @@
     <!-- CTA End -->
 
     <!-- FAQ Start -->
-    <section class="z_faq" data-aos="fade-up" data-aos-duration="800">
+    <section class="z_faq" id="faq" data-aos="fade-up" data-aos-duration="800">
       <div class="z_faq--container z_container">
         <div class="z_faq--heading z_section--heading">
           <h2
