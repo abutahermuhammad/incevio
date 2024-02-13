@@ -525,8 +525,7 @@ header {
   background-color: var(--UI-UI--200, #dedce5);
   border: none;
 }
-
-.z_hero--slider--dots.--selected {
+.z_hero--slider--dot.--selected {
   background-color: var(--Primary--500, #f89818);
 }
 

@@ -560,9 +560,10 @@ header {
           border-radius: 50px;
           background-color: var(--UI-UI--200, #dedce5);
           border: none;
-        }
-        &.--selected {
-          background-color: var(--Primary--500, #f89818);
+
+          &.--selected {
+            background-color: var(--Primary--500, #f89818);
+          }
         }
       }
     }
