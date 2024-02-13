@@ -72,7 +72,9 @@ addDotBtnsAndClickHandlers(embla, sliderDots);
 embla.on("destroy", addDotBtnsAndClickHandlers(embla, sliderDots));
 embla.slideNodes(); // Access API
 
-// Accordion
+/**
+ * Accordion
+ */
 var acc = document.querySelectorAll(".z_faq--accordion--item");
 
 acc.forEach((item) => {
