@@ -1,4 +1,6 @@
-// AOS
+/**
+ * AOS -  Scroll Animation
+ */
 if (AOS) {
   AOS.init({
     easing: "ease-out",
@@ -8,7 +10,9 @@ if (AOS) {
   });
 }
 
-// Mobile Menu
+/**
+ * Mobile Menu
+ */
 const mobileMenuBtn = document.querySelector(".z_primaryNav--menuBtn");
 const mobileMenu = document.querySelector(".z_primaryNav--mobileMenu");
 
@@ -17,7 +21,9 @@ mobileMenuBtn.addEventListener("click", () => {
   mobileMenu.classList.toggle("--active");
 });
 
-// Carousel Implementation
+/**
+ * Embla - Carousel
+ */
 const slider = document.querySelector(".z_hero--slider");
 const sliderDots = document.querySelector(".z_hero--slider--dots");
 const options = {
@@ -26,6 +32,7 @@ const options = {
 
 const embla = EmblaCarousel(slider, options);
 // addDotBtnsAndClickHandlers(embla);
+
 const addDotBtnsAndClickHandlers = (emblaApi, sliderDots) => {
   let dotNodes = [];
 
@@ -45,8 +52,8 @@ const addDotBtnsAndClickHandlers = (emblaApi, sliderDots) => {
   const toggleDotBtnsActive = () => {
     const previous = emblaApi.previousScrollSnap();
     const selected = emblaApi.selectedScrollSnap();
-    dotNodes[previous].classList.remove("z_hero--slider--dot--selected");
-    dotNodes[selected].classList.add("z_hero--slider--dot--selected");
+    dotNodes[previous].classList.remove("--selected");
+    dotNodes[selected].classList.add("--selected");
   };
 
   emblaApi

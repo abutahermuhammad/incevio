@@ -99,24 +99,6 @@ h6,
 }
 
 /* Classes */
-.flex {
-  display: flex;
-}
-.flex-col {
-  flex-direction: column;
-}
-.justify-between {
-  justify-content: space-between;
-}
-.justify-center {
-  justify-content: center;
-}
-.justify-end {
-  justify-content: flex-end;
-}
-.items-center {
-  align-items: center;
-}
 .text-white {
   color: var(--color-white);
 }
@@ -316,6 +298,12 @@ section {
 /*                    Navbar                    */
 /********************************************** */
 // Base
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
 .z_primaryNav {
   width: 100%;
   background-color: var(--color-white);
@@ -481,7 +469,14 @@ section {
         color: var(--color-white);
       }
       @at-root .z_hero--content--bullets {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         .--option {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
           gap: 16px;
 
           .icon {
@@ -493,14 +488,19 @@ section {
             color: var(--color-white, #fff);
           }
         }
+        .btn {
+        }
       }
     }
 
     @at-root .z_hero-testimonial {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 24px;
       @at-root .z_hero--slider {
         overflow: hidden;
         width: 100%;
-        max-width: 492px;
         height: 342px;
         background: rgba(20, 13, 38, 0.7);
         border: 1px solid var(--color-white--200, #dedce5);
@@ -512,15 +512,16 @@ section {
           -9px 66px 19px 0px rgba(0, 0, 0, 0);
         backdrop-filter: blur(8px);
         .z_slider--container {
-          width: auto;
+          display: flex;
+          width: inherit;
           max-width: inherit;
           height: inherit;
           .z_hero--slider--slide {
+            min-width: 0;
+
             width: inherit;
             max-width: inherit;
             height: inherit;
-            padding: 40px;
-            min-width: 0;
             text-align: center;
 
             display: flex;
@@ -529,16 +530,19 @@ section {
             justify-content: center;
             align-items: center;
             gap: 24px;
-            .z_hero--slider--avatar {
-              width: 80px;
-              height: 80px;
-              border-radius: 80px;
-              /* border: 4px solid var(--color-white--200, #DEDCE5); */
-            }
-            .z_hero--slider--desc {
-              max-width: 378px;
-              margin-right: auto;
-              color: var(--color-white--0, #fff);
+            @at-root .z_hero--slider--container {
+              padding: 40px;
+              .z_hero--slider--avatar {
+                width: 80px;
+                height: 80px;
+                border-radius: 80px;
+                /* border: 4px solid var(--color-white--200, #DEDCE5); */
+              }
+              .z_hero--slider--desc {
+                max-width: inherit;
+                margin-right: auto;
+                color: var(--color-white--0, #fff);
+              }
             }
           }
         }
@@ -551,12 +555,11 @@ section {
         @at-root .z_hero--slider--dot {
           height: 8px;
           width: 8px;
-          margin-top: 24px;
           border-radius: 50px;
           background-color: var(--UI-UI--200, #dedce5);
           border: none;
         }
-        &.z_hero--slider--dot--selected {
+        &.--selected {
           background-color: var(--Primary--500, #f89818);
         }
       }
@@ -564,7 +567,7 @@ section {
   }
 }
 
-// Phone Screen
+// Small Screen
 @media screen and (max-width: 959px) {
   .z_hero {
     @at-root .z_hero--container {
@@ -575,15 +578,10 @@ section {
         }
         @at-root .z_hero--content--bullets {
           .--option {
-            gap: 16px;
-
             .icon {
-              width: 24px;
-              height: 24px;
             }
 
             p {
-              color: var(--color-white, #fff);
             }
           }
         }
@@ -594,63 +592,64 @@ section {
 
       @at-root .z_hero-testimonial {
         @at-root .z_hero--slider {
-          overflow: hidden;
           max-width: clamp(594px, 74.25vw, 492px);
-          height: 342px;
-          background: rgba(20, 13, 38, 0.7);
-          border: 1px solid var(--UI-UI--200, #dedce5);
-          border-radius: 12px;
-          box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.03),
-            -1px 11px 11px 0px rgba(0, 0, 0, 0.03),
-            -3px 24px 14px 0px rgba(0, 0, 0, 0.02),
-            -6px 42px 17px 0px rgba(0, 0, 0, 0),
-            -9px 66px 19px 0px rgba(0, 0, 0, 0);
-          backdrop-filter: blur(8px);
           .z_slider--container {
-            width: auto;
             height: inherit;
             .z_hero--slider--slide {
-              width: inherit;
-              height: inherit;
-              padding: 40px;
-              min-width: 0;
-              text-align: center;
-
-              display: flex;
-              flex: 0 0 100%;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-              gap: 24px;
               .z_hero--slider--avatar {
-                width: 80px;
-                height: 80px;
-                border-radius: 80px;
-                /* border: 4px solid var(--color-white--200, #DEDCE5); */
               }
               .z_hero--slider--desc {
-                width: 378px;
-                margin-right: auto;
-                color: var(--color-white--0, #fff);
+                width: inherit;
               }
             }
           }
         }
         @at-root .z_hero--slider--dots {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 8px;
           @at-root .z_hero--slider--dot {
-            height: 8px;
-            width: 8px;
-            margin-top: 24px;
-            border-radius: 50px;
-            background-color: var(--UI-UI--200, #dedce5);
-            border: none;
           }
-          &.z_hero--slider--dot--selected {
-            background-color: var(--Primary--500, #f89818);
+          &.--selected {
+          }
+        }
+      }
+    }
+  }
+}
+// Fix: <=425px
+@media screen and (max-width: 639px) {
+  .z_hero {
+    @at-root .z_hero--container {
+      @at-root .z_hero--container {
+        flex-direction: column;
+        @at-root .z_hero-content {
+          @at-root .z_hero--content--title {
+          }
+          @at-root .z_hero--content--bullets {
+            flex-direction: column;
+            align-items: start;
+            gap: 16px;
+            .--option {
+              flex-direction: row;
+              .icon {
+              }
+
+              p {
+              }
+            }
+          }
+          .btn {
+          }
+        }
+        @at-root .z_hero-testimonial {
+          @at-root .z_hero--slider {
+            max-width: clamp(320px, 90vw, 599px);
+            .z_slider--container {
+              height: inherit;
+              .z_hero--slider--slide {
+                max-width: clamp(320px, 90vw, 599px);
+                .z_hero--slider--desc {
+                }
+              }
+            }
           }
         }
       }
@@ -664,21 +663,18 @@ section {
   .z_hero {
     min-height: 642px;
     @at-root .z_hero--container {
+      flex-direction: row;
       @at-root .z_hero-content {
         @at-root .z_hero--content--title {
           margin-bottom: 40px;
         }
         @at-root .z_hero--content--bullets {
+          gap: 88px;
           .--option {
-            gap: 16px;
-
             .icon {
-              width: 24px;
-              height: 24px;
             }
 
             p {
-              color: var(--color-white, #fff);
             }
           }
         }
@@ -689,66 +685,21 @@ section {
 
       @at-root .z_hero-testimonial {
         @at-root .z_hero--slider {
-          overflow: hidden;
-          width: 100%;
           max-width: 492px;
-          height: 342px;
-          background: rgba(20, 13, 38, 0.7);
-          border: 1px solid var(--color-white--200, #dedce5);
-          border-radius: 12px;
-          box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.03),
-            -1px 11px 11px 0px rgba(0, 0, 0, 0.03),
-            -3px 24px 14px 0px rgba(0, 0, 0, 0.02),
-            -6px 42px 17px 0px rgba(0, 0, 0, 0),
-            -9px 66px 19px 0px rgba(0, 0, 0, 0);
-          backdrop-filter: blur(8px);
           .z_slider--container {
-            width: auto;
-            max-width: inherit;
-            height: inherit;
             .z_hero--slider--slide {
-              width: inherit;
-              max-width: inherit;
-              height: inherit;
-              padding: 40px;
-              min-width: 0;
-              text-align: center;
-
-              display: flex;
-              flex: 0 0 100%;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-              gap: 24px;
               .z_hero--slider--avatar {
-                width: 80px;
-                height: 80px;
-                border-radius: 80px;
-                /* border: 4px solid var(--color-white--200, #DEDCE5); */
               }
               .z_hero--slider--desc {
                 max-width: 378px;
-                margin-right: auto;
-                color: var(--color-white--0, #fff);
               }
             }
           }
         }
         @at-root .z_hero--slider--dots {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 8px;
           @at-root .z_hero--slider--dot {
-            height: 8px;
-            width: 8px;
-            margin-top: 24px;
-            border-radius: 50px;
-            background-color: var(--UI-UI--200, #dedce5);
-            border: none;
-          }
-          &.z_hero--slider--dot--selected {
-            background-color: var(--Primary--500, #f89818);
+            &.--selected {
+            }
           }
         }
       }
@@ -804,11 +755,10 @@ section {
           background: var(--color-white-100, #f4f4f6);
           .z_benefits--card--avatar {
             color: var(--color-secondary--800, #3a2e56);
-            text-align: center;
-            font-family: Inter;
-            font-size: 32px;
-            font-weight: 700;
-            line-height: 80%; /* 25.6px */
+            width: auto;
+            height: auto;
+            max-width: 32px;
+            max-height: 26px;
           }
         }
         @at-root .z_benefits--card--title {
